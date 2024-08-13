@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<section class="tasks"> 
+
+      <!-- Секция переключения страниц --> 
+    <ul class="pages"> 
+        <li class="pages__link">ALL</li>
+        <li class="pages__link">Overdue</li>
+        <li class="pages__link">Done</li>
+    </ul>
+      <!--.... Секция переключения страниц ...-->
+
+      <!-- страницы --> 
+      <section class="tasks__all displayTask" id="page1"></section>
+      <section class="tasks__overdue displayTask" id="page2" hidden></section> 
+      <section class="tasks__done displayTask" id="page3" hidden></section> 
+      <!-- .....страницы... --> 
+
+</section>
+
+<section class="form">
+    <form class="addTask" name="addTaskForm">
+        <span class="addTask--text">Title</span>
+        <input class="addTask--title" name="task__title" >
+        <span class="addTask--text">Description</span>
+        <textarea class="addTask--description" name="task__description" ></textarea>
+        <span class="addTask--text">Start Day</span>
+        <input class="addTask--createDate" type="date" name="task__createDate" >
+        <span class="addTask--text">Deadline</span>
+        <input class="addTask--deadline" type="date" name="task__deadline" >
+        <input class="addTask--submit" type="submit" name="task__submit" value="Add Task">
+    </form>
+</section>
+
+<section class="modal__wrapper">
+    <section class="modal__container">
+        <form name="edit__form" class="edit__form">
+            <button type="button" class="close__btn">x</button>
+            <input class="edit__form--title" placeholder="title" >
+            <textarea class="edit__form--description" placeholder="Description" ></textarea>
+            <input class="edit__form--startDay" type="date" >
+            <input class="edit__form--deadline" type="date" >
+            <input type="submit" class="edit__form--submit" value="Save">
+        </form>
+    </section>
+</section>
+
+<script src="index.js"></script> 
+</body>
+</html>
